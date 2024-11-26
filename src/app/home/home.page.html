@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+      ข้อมูลนักเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" color="first">
+
+  <ion-label style="text-align: center;">
+    <h1><b>กรอกข้อมูลนักเรียนชั้นปวช.2/3</b></h1>
+  </ion-label>
+  <ion-item>
+    <ion-label position="floating">รหัสนักเรียน</ion-label>
+    <ion-input type="text" [(ngModel)]="txtidstu"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ชื่อ-สกุล</ion-label>
+    <ion-input type="text" [(ngModel)]="txtname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ชื่อเล่น</ion-label>
+    <ion-input type="text" [(ngModel)]="txtnname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">อายุ</ion-label>
+    <ion-input type="text" [(ngModel)]="txtage"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">เบอร์โทรศัพท์</ion-label>
+    <ion-input type="text" [(ngModel)]="txtphone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ที่อยู่</ion-label>
+    <ion-input type="text" [(ngModel)]="txtaddress"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-list>
+      <ion-label>สถานะภาพ</ion-label>
+        <ion-select aria-label="Fruit" interface="popover" placeholder="เลือกสถานะภาพ" slot="end" [(ngModel)]="txtstatus">
+          <ion-select-option value="โสด">โสด</ion-select-option>
+          <ion-select-option value="สมรสแล้ว">สมรสแล้ว</ion-select-option>
+          <ion-select-option value="หย่าร้าง">หย่าร้าง</ion-select-option>
+          <ion-select-option value="มีแฟน">มีแฟน</ion-select-option>
+        </ion-select>
+    </ion-list>
+  </ion-item>
+  <ion-item>
+    <div class="center">
+    <ion-button size="medium" (click)="addmember()" (click)="GoToNext()">บันทึกข้อมูล</ion-button>
+    <ion-button slot="end" (click)="showdata()" color="warning">ดูข้อมูล</ion-button>
+  </div>
+  </ion-item>
+
+</ion-content>
